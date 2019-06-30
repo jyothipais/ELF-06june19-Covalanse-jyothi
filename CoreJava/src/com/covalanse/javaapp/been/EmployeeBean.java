@@ -57,6 +57,22 @@ public class EmployeeBean {
 		this.salary = salary;
 	}
 
+	public EmployeeBean() {
+
+	}
+
+	public EmployeeBean(int id, int age, String name, String departement, String gender, double salary,
+			Date joining_Date) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.name = name;
+		this.departement = departement;
+		this.gender = gender;
+		this.salary = salary;
+		this.joining_Date = joining_Date;
+	}
+
 	public Date getJoining_Date() {
 		return joining_Date;
 	}

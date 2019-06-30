@@ -1,8 +1,12 @@
 package com.covalance.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public abstract class Honda {
+	final Logger loger = Logger.getLogger(" Honda ");
+
 	void engine() {
-		System.out.println("Im a engine method of Honda class");
+		loger.info("Im a engine method of Honda class");
 	}
 
 	abstract void design();

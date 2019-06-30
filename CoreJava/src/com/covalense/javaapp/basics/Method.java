@@ -1,6 +1,9 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Method {
+	final static Logger loger = Logger.getLogger("Method");
 	static int multiplication(int a, int b) {
 		int c = a * b;
 		return c;
@@ -9,7 +12,7 @@ public class Method {
 
 	public static void main(String[] args) {
 		int i = multiplication(10, 2);
-		System.out.println("result is " + i);
+		loger.info("result is " + i);
 	}
 
 }

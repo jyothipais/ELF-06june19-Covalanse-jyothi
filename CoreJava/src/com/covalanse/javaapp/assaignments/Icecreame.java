@@ -1,8 +1,11 @@
 package com.covalanse.javaapp.assaignments;
 
+import java.util.logging.Logger;
+
 public class Icecreame {
+	final Logger loger = Logger.getLogger("Icecreame");
 	void eat() {
-		System.out.println("ICE-CREAM");
+		loger.info("ICE-CREAM");
 	}
 
 }

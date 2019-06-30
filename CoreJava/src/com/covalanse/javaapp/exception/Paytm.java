@@ -1,6 +1,9 @@
 package com.covalanse.javaapp.exception;
 
+import java.util.logging.Logger;
+
 public class Paytm {
+	final static Logger loger = Logger.getLogger("Testaniaml");
 	void book() {
 		System.out.println("payment for the ticket booking");
 		try {

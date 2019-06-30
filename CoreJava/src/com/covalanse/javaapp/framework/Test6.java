@@ -1,9 +1,11 @@
 package com.covalanse.javaapp.framework;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Test6 {
 	public static void main(String[] args) {
+		final  Logger loger = Logger.getLogger("Test6");
 		ArrayList<Double> a = new ArrayList<Double>();
 		a.add(9.2);
 		a.add(1.5);
@@ -15,11 +17,11 @@ public class Test6 {
 		b.add(154.67);
 		b.add(786.87);
 		
-		System.out.println("******BEFORE********"+a);
+		loger.info("******BEFORE********"+a);
 		
 		a.addAll(b);
 		
-		System.out.println("******AFTER********"+a);
+		loger.info("******AFTER********"+a);
 	}
 
 }

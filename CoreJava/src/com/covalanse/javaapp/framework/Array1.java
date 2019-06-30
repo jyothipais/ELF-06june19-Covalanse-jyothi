@@ -1,8 +1,10 @@
 package com.covalanse.javaapp.framework;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Array1 {
+	final static Logger loger = Logger.getLogger("Array1");
 	public static void main(String[] args) {
 		ArrayList a=new ArrayList();
 	
@@ -12,7 +14,7 @@ public class Array1 {
 		a.add('B');
 		
 		for(Object o:a) {
-			System.out.println(o);
+			loger.info(""+o);
 		}
 	}
 

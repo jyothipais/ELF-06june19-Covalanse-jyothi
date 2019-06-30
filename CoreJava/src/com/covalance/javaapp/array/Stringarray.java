@@ -1,7 +1,10 @@
 package com.covalance.javaapp.array;
 
+import java.util.logging.Logger;
+
 public class Stringarray {
 	public static void main(String[] args) {
+		final Logger loger = Logger.getLogger("Stringarray ");
 		String[] s = new String[7];
 
 		s[0] = "nickeymol";
@@ -12,7 +15,7 @@ public class Stringarray {
 		s[5] = "pushpa";
 		s[6] = "joyly";
 		for (int i = 0; i <= s.length; i++)
-			System.out.println(s[i]);
+			loger.info(s[i]);
 		System.out.println(s.length);
 	}
 	/*

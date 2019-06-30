@@ -1,8 +1,12 @@
 package com.covalense.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public class Marker extends Pen {
+	final Logger loger = Logger.getLogger("Marker");
+
 	void color() {
-		System.out.println("Marker color is BLACK");
+		loger.info("Marker color is BLACK");
 	}
 
 	public static void main(String[] args) {

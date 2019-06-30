@@ -1,26 +1,29 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Language {
+	final static Logger loger = Logger.getLogger("Language");
 	public static void main(String[] args) {
 		int selectedlanguage = 6;
 		switch (selectedlanguage) {
 		case 1:
-			System.out.println("Selected Language is KANNADA");
+			loger.info("Selected Language is KANNADA");
 			break;
 		case 2:
-			System.out.println("Selected Language is ENGLISH");
+			loger.info("Selected Language is ENGLISH");
 			break;
 		case 3:
-			System.out.println("Selected Language isHINDI");
+			loger.info("Selected Language isHINDI");
 			break;
 		case 4:
-			System.out.println("Selected Language isTAMIL");
+			loger.info("Selected Language isTAMIL");
 			break;
 		case 5:
-			System.out.println("Selected Language isTELUGU");
+			loger.info("Selected Language isTELUGU");
 			break;
 		default:
-			System.out.println("invalid option you have selected!!!!!!!!!!!!");
+			loger.info("invalid option you have selected!!!!!!!!!!!!");
 		}
 	}
 

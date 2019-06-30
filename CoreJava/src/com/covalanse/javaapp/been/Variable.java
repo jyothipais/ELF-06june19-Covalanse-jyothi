@@ -1,13 +1,17 @@
 package com.covalanse.javaapp.been;
 
+import java.util.logging.Logger;
+
 public class Variable {
-	int id=10;
+	final Logger loger = Logger.getLogger("Variable");
+	int id = 10;
+
 	void display() {
-		System.out.println("id is"+id);
-		
+		loger.info("id is" + id);
+
 	}
-	
-public static void main(String[] args) {
-	
-}
+
+	public static void main(String[] args) {
+
+	}
 }

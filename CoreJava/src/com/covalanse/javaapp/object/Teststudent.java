@@ -1,6 +1,9 @@
 package com.covalanse.javaapp.object;
 
+import java.util.logging.Logger;
+
 public class Teststudent {
+	final static  Logger loger = Logger.getLogger("Teststudent");
 	public static void main(String[] args) {
 		Student s = new Student("bala", 21, 4.5);
 		Student s1 = new Student("bala", 21, 4.5);
@@ -8,11 +11,11 @@ public class Teststudent {
 		s.getHeight();
 		s.getName();
 
-		System.out.println("student name is :" + s.getName());
-		System.out.println("student age is :" + s.getAge());
-		System.out.println("student height  is :" + s.getHeight());
+		loger.info("student name is :" + s.getName());
+		loger.info("student age is :" + s.getAge());
+		loger.info("student height  is :" + s.getHeight());
 
-		System.out.println(s.equals(s1));
+		loger.info(""+s.equals(s1));
 
 	}
 

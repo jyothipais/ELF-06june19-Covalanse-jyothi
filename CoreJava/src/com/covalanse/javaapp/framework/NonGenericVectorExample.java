@@ -1,55 +1,57 @@
 package com.covalanse.javaapp.framework;
 
 import java.util.Enumeration;
+
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 public class NonGenericVectorExample {
 	public static void main(String[] args) {
+		final  Logger loger = Logger.getLogger("NonGenericVectorExample");
 		Vector a = new Vector();
 		a.add("eyekiller");
 		a.add("33.5");
 		a.add('B');
 		
 		for (Object d : a) {
-			System.out.println(d);
+			loger.info(""+d);
 		}
-		System.out.println("*************ITERATOR**********");
+		loger.info("*************ITERATOR**********");
 
 		Iterator it = a.iterator();
 		while (it.hasNext()) {
 			Object r = it.next();
-			System.out.println(r);
+			loger.info(""+r);
 		}
 
-		System.out.println("************LISTITERATOR***************");
+		loger.info("************LISTITERATOR***************");
 	
 		ListIterator lst = a.listIterator();
 		while (lst.hasNext()) {
 			Object r = lst.next();
-			System.out.println(r);
+			loger.info(""+r);
 		}
-		System.out.println("**************backward**************");
+		loger.info("**************backward**************");
 
 		while (lst.hasPrevious()) {
 			Object r = lst.previous();
-			System.out.println(r);
+			loger.info(""+r);
 		}
 		
-		System.out.println("**************forloop**************");
+		loger.info("**************forloop**************");
 		
 		for(int i=0;i<a.size();i++) {
-			System.out.println(a);
+			loger.info(""+a);
 		}
 		
-		System.out.println("**************Enumeration**************");
+		loger.info("**************Enumeration**************");
 		
 		Enumeration lst1=a.elements();
 		while(lst1.hasMoreElements()) {
 			Object  r=lst1.nextElement();
-			System.out.println(r);
+			loger.info(""+r);
 		}
 		
 	}

@@ -1,7 +1,12 @@
 package com.covalanse.javaapp.assaignments;
+
+import java.util.logging.Logger;
+
 public class Benz extends Car1 {
+	final Logger loger = Logger.getLogger("Benz ");
+
 	void driving() {
-		System.out.println("driving benz car");
+		loger.info("driving benz car");
 	}
 
 }

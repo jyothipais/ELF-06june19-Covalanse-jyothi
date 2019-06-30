@@ -2,9 +2,12 @@ package com.covalanse.javaapp.framework;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.logging.Logger;
 
 public class ListIterator4 {
+	@SuppressWarnings({ "rawtypes", "unchecked", "unused" })
 	public static void main(String[] args) {
+		final  Logger loger = Logger.getLogger("ListIterator4");
 		ArrayList a = new ArrayList();
 
 		a.add(12);
@@ -14,7 +17,7 @@ public class ListIterator4 {
 
 		ListIterator lst = a.listIterator();
 
-		System.out.println(a);
+		loger.info(""+a);
 
 	}
 }

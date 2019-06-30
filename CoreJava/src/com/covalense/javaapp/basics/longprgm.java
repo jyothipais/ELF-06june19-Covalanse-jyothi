@@ -1,10 +1,12 @@
 package com.covalense.javaapp.basics;
 
-public class longprgm {
+import java.util.logging.Logger;
+
+public class Longprgm {
+	final static Logger loger = Logger.getLogger("Longprgm");
 	public static void main(String[] args) {
 		long a = 123;
-		// long b=814737611l;
-		System.out.println(a);
+		loger.info(""+a);
 	}
 
 }

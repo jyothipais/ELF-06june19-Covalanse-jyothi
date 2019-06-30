@@ -3,37 +3,39 @@ package com.covalanse.javaapp.framework;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.logging.Logger;
 
 public class GenericStringTypeArrayListUsingIterator1 {
 
 	public static void main(String[] args) {
-		ArrayList<String> a = new ArrayList();
+		final Logger loger = Logger.getLogger("GenericStringTypeArrayListUsingIterator1");
+		ArrayList<String> a = new ArrayList<String>();
 		a.add("eyekiller");
 		a.add("sara");
 		a.add("minikutty");
 
 		for (String d : a) {
-			System.out.println(d);
+			loger.info("" + d);
 		}
-		System.out.println("*************ITERATOR**********");
+		loger.info("*************ITERATOR**********");
 
 		Iterator<String> it = a.iterator();
 		while (it.hasNext()) {
 			String r = it.next();
-			System.out.println(r);
+			loger.info("" + r);
 		}
 
-		System.out.println("************LISTITERATOR***************");
+		loger.info("************LISTITERATOR***************");
 		ListIterator<String> lst = a.listIterator(a.size());
 		while (lst.hasNext()) {
 			String r = lst.next();
-			System.out.println(r);
+			loger.info("" + r);
 		}
-		System.out.println("**************backward**************");
+		loger.info("**************backward**************");
 
 		while (lst.hasPrevious()) {
 			String r = lst.previous();
-			System.out.println(r);
+			loger.info("" + r);
 		}
 	}
 }

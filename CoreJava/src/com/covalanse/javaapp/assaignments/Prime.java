@@ -1,6 +1,9 @@
 package com.covalanse.javaapp.assaignments;
 
+import java.util.logging.Logger;
+
 public class Prime {
+	final static Logger loger = Logger.getLogger("Prime ");
 	public static void main(String[] args) {
 		int i = 0;
 		int num = 0;
@@ -16,8 +19,8 @@ public class Prime {
 				primenumbers = primenumbers + i + "";
 			}
 		}
-		System.out.println("prime no are:");
-		System.out.println(primenumbers);
+		loger.info("prime no are:");
+		loger.info(primenumbers);
 	}
 
 }

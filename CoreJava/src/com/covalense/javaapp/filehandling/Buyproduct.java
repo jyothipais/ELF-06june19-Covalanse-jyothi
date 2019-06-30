@@ -4,9 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Buyproduct {
-	private static final Logger loger = Logger.getLogger("flipcart");
-	void buy()
-	{
+	private static final Logger loger = Logger.getLogger("Buyproduct");
+
+	void buy() {
 
 		loger.log(Level.SEVERE, "HI im SEVERE MESSEGE");
 		loger.log(Level.WARNING, "HI im WARNING MESSEGE");

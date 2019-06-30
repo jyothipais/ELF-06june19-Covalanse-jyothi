@@ -1,9 +1,12 @@
 package com.covalanse.javaapp.objectoriented;
 
+import java.util.logging.Logger;
+
 public class Mobile {
+	final  Logger loger = Logger.getLogger("Mobile");
 	void call()
 	{
-		System.out.println("call method");
+		loger.info("call method");
 	}
 
 }

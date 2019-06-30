@@ -1,8 +1,12 @@
 package com.covalense.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public class Overiding {
+	final Logger loger = Logger.getLogger("Overiding");
+
 	void bike() {
-		System.out.println("New Bike");
+		loger.info("New Bike");
 	}
 
 }

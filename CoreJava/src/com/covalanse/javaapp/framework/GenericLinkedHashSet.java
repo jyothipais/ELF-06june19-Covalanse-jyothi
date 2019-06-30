@@ -2,25 +2,26 @@ package com.covalanse.javaapp.framework;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import java.util.TreeSet;
+import java.util.logging.Logger;
 
 public class GenericLinkedHashSet {
 	public static void main(String[] args) {
-		LinkedHashSet<Integer> hs=new LinkedHashSet();
+		final Logger loger = Logger.getLogger("GenericLinkedHashSet");
+		LinkedHashSet<Integer> hs = new LinkedHashSet<Integer>();
 		hs.add(29);
 		hs.add(48);
 		hs.add(89);
-		
-		for(Integer r:hs) {
-			System.out.println(r);
+
+		for (Integer r : hs) {
+			loger.info("" + r);
 		}
-		
-		System.out.println("********** ITERATOR**********");
-		
-		Iterator<Integer> it=hs.iterator();
-		while(it.hasNext()) {
-			Integer r=it.next();
-			System.out.println(r);
+
+		loger.info("********** ITERATOR**********");
+
+		Iterator<Integer> it = hs.iterator();
+		while (it.hasNext()) {
+			Integer r = it.next();
+			loger.info("" + r);
 		}
 	}
 

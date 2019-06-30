@@ -4,9 +4,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.Serializable;
+import java.util.logging.Logger;
 
 public class Testperson2 {
+	final static Logger loger = Logger.getLogger("Testperson2 ");
+
 	public static void main(String[] args) {
 		FileInputStream fin = null;
 		ObjectInputStream oin = null;
@@ -14,9 +16,9 @@ public class Testperson2 {
 			fin = new FileInputStream("smily.txt");
 			oin = new ObjectInputStream(fin);
 			Person p = (Person) oin.readObject();
-			System.out.println("NAME  : " + p.getName());
-			System.out.println("age      :" + p.getAge());
-			System.out.println("id         :" + p.getId());
+			loger.info("NAME  : " + p.getName());
+			loger.info("age      :" + p.getAge());
+			loger.info("id         :" + p.getId());
 			oin.close();
 		} catch (FileNotFoundException e) {
 

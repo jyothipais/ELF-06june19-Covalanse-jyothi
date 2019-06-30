@@ -1,13 +1,15 @@
 package com.covalense.javaapp.filehandling;
 
-public class Cow extends Animal{
+import java.util.logging.Logger;
 
-		void sound()
-		{
-			System.out.println("ambaaa");
-		}
-		void div(int a,int b)
-		{
-			int res=a/b;
-		}
+public class Cow extends Animal {
+	private final static Logger loger = Logger.getLogger("Cow");
+
+	void sound() {
+		loger.info("ambaaa");
+	}
+
+	void div(int a, int b) {
+		int res = a / b;
+	}
 }

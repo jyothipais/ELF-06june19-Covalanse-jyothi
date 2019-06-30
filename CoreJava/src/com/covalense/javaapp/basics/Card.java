@@ -1,6 +1,9 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Card {
+	final static Logger loger = Logger.getLogger("Card");
 	static int organizationcnt;
 	int cnt;
 	void cardswipe()
@@ -12,10 +15,10 @@ public class Card {
 		Card j=new Card();
 		Card p=new Card();
 		Card a=new Card();
-		System.out.println("count of java is "+j.cnt);
-		System.out.println("count of angularjs is"+a.cnt);
-		System.out.println("count of php is"+p.cnt);
-		System.out.println("the organization count is"+Card.organizationcnt);
+		loger.info("count of java is "+j.cnt);
+		loger.info("count of angularjs is"+a.cnt);
+		loger.info("count of php is"+p.cnt);
+		loger.info("the organization count is"+Card.organizationcnt);
 
 	}
 }

@@ -6,7 +6,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Loggeexample {
-	private static final Logger loger = Logger.getLogger("eyekiller");
+	private static final Logger loger = Logger.getLogger("Loggeexample");
 
 	public static void main(String[] args) {
 

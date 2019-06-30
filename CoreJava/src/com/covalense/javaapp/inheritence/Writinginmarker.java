@@ -1,8 +1,12 @@
 package com.covalense.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public class Writinginmarker extends Writng {
+	final Logger loger = Logger.getLogger("Writinginmarker");
+
 	void wrt() {
-		System.out.println("Writing using marker");
+		loger.info("Writing using marker");
 	}
 
 	public static void main(String[] args) {

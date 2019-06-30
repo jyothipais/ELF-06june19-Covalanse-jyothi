@@ -1,11 +1,14 @@
 package com.covalanse.javaapp.assaignments;
 
+import java.util.logging.Logger;
+
 public class Driver {
+	final Logger loger = Logger.getLogger("Driver  ");
 	void receive(Car1 c) {
 		if (c instanceof Audi) {
-			System.out.println("drive audi");
+		loger.info("drive audi");
 		} else if (c instanceof Benz) {
-			System.out.println("drive benz");
+		loger.info("drive benz");
 		}
 
 	}

@@ -1,9 +1,12 @@
 package com.covalense.javaapp.basics;
 
-public class multiplication {
+import java.util.logging.Logger;
+
+public class Multiplication {
+	final static Logger loger = Logger.getLogger("Multiplication");
 
 	public static void main(String[] args) {
-		System.out.println(10 * 5);
+		loger.info(""+10 * 5);
 	}
 
 }

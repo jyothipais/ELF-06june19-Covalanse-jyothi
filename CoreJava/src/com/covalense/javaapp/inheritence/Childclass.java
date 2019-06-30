@@ -1,8 +1,12 @@
 package com.covalense.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public class Childclass extends Singleinheritence {
+	final Logger loger = Logger.getLogger("Childclass");
+
 	void child() {
-		System.out.println("Imk a child class content");
+		loger.info("Imk a child class content");
 	}
 
 	public static void main(String[] args) {

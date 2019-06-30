@@ -1,6 +1,9 @@
 package com.covalanse.javaapp.lamdaexpression;
 
+import java.util.logging.Logger;
+
 public class TestCalculateFactorial {
+	final static Logger loger = Logger.getLogger("TestCalculateFactorial");
 public static void main(String[] args) {
 	 CalculateFactorial f=a->{
 		int k=1;
@@ -10,6 +13,6 @@ public static void main(String[] args) {
 		return k;
 	};
 	int res=f.factorial(5);
-	System.out.println("Factorial is"+res);
+	loger.info("Factorial is"+res);
 }
 }

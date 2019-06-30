@@ -1,6 +1,9 @@
 package com.covalanse.javaapp.methods;
 
+import java.util.logging.Logger;
+
 public class Bmi {
+	final static Logger loger = Logger.getLogger("Bmi");
 	double h, w, bmi;
 
 	double calculation() {
@@ -10,13 +13,13 @@ public class Bmi {
 
 	void calc() {
 		if (bmi >= 30)
-			System.out.println("OBESE");
+			loger.info("OBESE");
 		else if (bmi >= 25)
-			System.out.println("OVERWEIGHT");
+			loger.info("OVERWEIGHT");
 		else if (bmi >= 18.5)
-			System.out.println("NORMAL");
+			loger.info("NORMAL");
 		else
-			System.out.println("under weight");
+			loger.info("under weight");
 
 	}
 

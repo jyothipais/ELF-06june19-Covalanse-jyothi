@@ -1,9 +1,12 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Factorial {
+	final static Logger loger = Logger.getLogger("Factorial");
 	public static void main(String[] args) {
 		int result = factorial(5);
-		System.out.println(result);
+		loger.info(""+result);
 	}
 
 	static int factorial(int a) {

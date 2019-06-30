@@ -1,16 +1,19 @@
 package com.covalense.javaapp.constructor;
 
+import java.util.logging.Logger;
+
 public class C1 {
+	final static Logger loger = Logger.getLogger("C1");
+
 	C1(int x) {
-		System.out.println("integer");
+		loger.info("integer");
 	}
 
 	C1(double y) {
-		System.out.println("double");
+		loger.info("double");
 	}
 
 	public static void main(String[] args) {
-		// new C1(5);
 		new C1(14.5);
 	}
 }

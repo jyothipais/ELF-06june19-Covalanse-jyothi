@@ -1,13 +1,16 @@
 package com.covalanse.javaapp.been;
 
+import java.util.logging.Logger;
+
 public class Testfinal {
 	public static void main(String[] args) {
+		final Logger loger = Logger.getLogger("Testfinal");
 		Final f = new Final("anitta", 21);
 		f.getName();
 		f.getAge();
-		System.out.println("the name is:" + f.getName());
+	loger.info("the name is:" + f.getName());
 
-		System.out.println("the age is:" + f.getAge());
+	loger.info("the age is:" + f.getAge());
 	}
 
 }

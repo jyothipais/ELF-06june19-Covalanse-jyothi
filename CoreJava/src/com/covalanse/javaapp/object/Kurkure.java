@@ -1,8 +1,11 @@
 package com.covalanse.javaapp.object;
 
+import java.util.logging.Logger;
+
 public class Kurkure extends Baby {
+	final  Logger loger = Logger.getLogger("Baby");
 	void open() {
-		System.out.println("open the Kurkure");
+		loger.info("open the Kurkure");
 	}
 
 	public static void main(String[] args) {

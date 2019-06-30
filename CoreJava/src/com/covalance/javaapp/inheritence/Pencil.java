@@ -1,8 +1,12 @@
 package com.covalance.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public abstract class Pencil {
+	final Logger loger = Logger.getLogger(" Pencil  ");
+
 	void draw() {
-		System.out.println("drawing from pencil in pencil class");
+		loger.info("drawing from pencil in pencil class");
 	}
 
 	abstract void write();

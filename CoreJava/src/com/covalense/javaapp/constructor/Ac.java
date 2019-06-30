@@ -1,7 +1,10 @@
 package com.covalense.javaapp.constructor;
 
+import java.util.logging.Logger;
+
 public class Ac {
+	final static Logger loger = Logger.getLogger("Ac");
 	Ac() {
-		System.out.println("Im a consrtuctor");
+		loger.info("Im a consrtuctor");
 	}
 }

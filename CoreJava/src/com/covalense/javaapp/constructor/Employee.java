@@ -1,6 +1,9 @@
 package com.covalense.javaapp.constructor;
 
+import java.util.logging.Logger;
+
 public class Employee {
+	final static Logger loger = Logger.getLogger("Employee");
 	String emp_name;
 	int emp_no, salary;
 
@@ -11,8 +14,8 @@ public class Employee {
 	}
 
 	void display() {
-		System.out.println("EMP_NAME is" + emp_name);
-		System.out.println("EMP_NO is" + emp_no);
-		System.out.println("SALARY is" + salary);
+		loger.info("EMP_NAME is" + emp_name);
+		loger.info("EMP_NO is" + emp_no);
+		loger.info("SALARY is" + salary);
 	}
 }

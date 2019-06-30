@@ -1,10 +1,14 @@
 package com.covalanse.javaapp.assaignments;
+
+import java.util.logging.Logger;
+
 public class Stu1 {
+	final Logger loger = Logger.getLogger("Stu1 ");
 	void receive(Student s) {
-		System.out.println(s.getName());
-		System.out.println(s.getAge());
-		System.out.println(s.getBloodgroup());
-		System.out.println(s.getTkno());
+		loger.info(""+s.getName());
+		loger.info(""+s.getAge());
+		loger.info(""+s.getBloodgroup());
+		loger.info(""+s.getTkno());
 	}
 
 }

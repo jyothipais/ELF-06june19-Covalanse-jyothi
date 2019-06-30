@@ -1,16 +1,19 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Grade {
+	final static Logger loger = Logger.getLogger("Grade");
 	public static void main(String[] args) {
 		double score = 45;
 		if (score > 85) {
-			System.out.println("grade +a");
+			loger.info("grade +a");
 		} else if (score > 60) {
-			System.out.println("Grade is B");
+			loger.info("Grade is B");
 		} else if (score > 35) {
-			System.out.println("Grade is C");
+			loger.info("Grade is C");
 		} else {
-			System.out.println("Grade is D");
+			loger.info("Grade is D");
 		}
 	}
 

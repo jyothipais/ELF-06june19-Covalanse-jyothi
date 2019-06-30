@@ -1,11 +1,13 @@
 package com.covalense.javaapp.basics;
 
-public class floating {
-	public static void main(String[] args) {
-		// float t=3.0;
-		float t = 3.0f;
+import java.util.logging.Logger;
 
-		System.out.println(t);
+public class Floating {
+	final static Logger loger = Logger.getLogger(" Floating");
+	public static void main(String[] args) {
+			float t = 3.0f;
+
+			loger.info(""+t);
 	}
 
 }

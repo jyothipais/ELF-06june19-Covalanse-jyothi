@@ -1,9 +1,10 @@
 package com.covalance.javaapp.array;
 
-import java.util.Arrays;
+import java.util.logging.Logger;
 
 public class TestEmployeeBeen {
 	public static void main(String[] args) {
+		final Logger loger = Logger.getLogger("TestEmployeeBeen ");
 		EmployeeBeen[] emp = new EmployeeBeen[5];
 
 		EmployeeBeen e1 = new EmployeeBeen();
@@ -38,10 +39,10 @@ public class TestEmployeeBeen {
 		emp[4] = e5;
 
 		for (EmployeeBeen r : emp) {
-			System.out.println("name is  :" + r.getName());
-			System.out.println("age is      :" + r.getAge());
-			System.out.println("salary is :" + r.getSal());
-			System.out.println("************************************************");
+			loger.info("name is  :" + r.getName());
+			loger.info("age is      :" + r.getAge());
+			loger.info("salary is :" + r.getSal());
+			loger.info("************************************************");
 
 		}
 

@@ -1,6 +1,11 @@
 package com.covalance.javaapp.inheritence;
+
+import java.util.logging.Logger;
+
 public class Gmail extends Google {
+	final Logger loger = Logger.getLogger(" Testpencil  ");
+
 	void fetchdata() {
-		System.out.println("fetching data from database to gmail");
+		loger.info("fetching data from database to gmail");
 	}
 }

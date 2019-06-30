@@ -1,15 +1,17 @@
 package com.covalanse.javaapp.assaignments;
 
-public class Employee7 {
+import java.util.logging.Logger;
 
+public class Employee7 {
+	final Logger loger = Logger.getLogger("Employee7  ");
 	void search(int id) {
 		// id
-		System.out.println("searching by  using id");
+		loger.info("searching by  using id");
 	}
 
 	void search(String name) {
 		// Like
-		System.out.println("searching by using name");
+		loger.info("searching by using name");
 	}
 
 }

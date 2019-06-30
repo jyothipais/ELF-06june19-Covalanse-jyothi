@@ -1,8 +1,12 @@
 package com.covalense.javaapp.inheritence;
 
+import java.util.logging.Logger;
+
 public class Cow extends Lion {
+	final Logger loger = Logger.getLogger("Cow");
+
 	void eatt() {
-		System.out.println("Cow is eating grass");
+		loger.info("Cow is eating grass");
 	}
 
 	public static void main(String[] args) {

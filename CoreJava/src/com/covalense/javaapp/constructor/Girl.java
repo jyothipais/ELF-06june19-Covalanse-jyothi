@@ -1,11 +1,15 @@
 package com.covalense.javaapp.constructor;
 
+import java.util.logging.Logger;
+
 public class Girl {
+	final static Logger loger = Logger.getLogger("Girl");
+
 	void receive(Phone p) {
 		if (p instanceof Iphone) {
-			System.out.println("I LOVE U");
+			loger.info("I LOVE U");
 		} else if (p instanceof Mi) {
-			System.out.println("THANK U BROTHER");
+			loger.info("THANK U BROTHER");
 		}
 
 	}

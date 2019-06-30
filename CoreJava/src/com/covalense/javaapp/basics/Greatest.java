@@ -1,12 +1,16 @@
 package com.covalense.javaapp.basics;
 
+import java.util.logging.Logger;
+
 public class Greatest {
+	final static Logger loger = Logger.getLogger("Greatest");
 	public static void main(String[] args) {
-		int a = 20, b = 30;
+		int a = 20;
+		int b = 30;
 		if (a > b) {
-			System.out.println("A is greatest" + a);
+			loger.info("A is greatest" + a);
 		} else {
-			System.out.println("B is greatest" + b);
+			loger.info("B is greatest" + b);
 		}
 
 	}

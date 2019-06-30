@@ -1,20 +1,18 @@
 package com.covalanse.javaapp.been;
 
+import java.util.logging.Logger;
+
 public class Example {
+	final Logger loger = Logger.getLogger("Example  ");
 	String str = "abc";
 	void dipslay() { 
 		
-		System.out.println("this is 1st method String");
+		loger.info("this is 1st method String");
 	}
-
-	/*void dipslay1() {
-	
-		System.out.println("this is 2nd method String");
-	}*/
 
 	void dipslay2() {
 		
-		System.out.println("this is 3rd method String");
+		loger.info("this is 3rd method String");
 	}
 
 }

@@ -1,11 +1,14 @@
 package com.covalanse.javaapp.object;
 
+import java.util.logging.Logger;
+
 public class Pen {
+	final  Logger loger = Logger.getLogger("Pen");
 	void open() {
-		System.out.println("Open the pen ");
+		loger.info("Open the pen ");
 	}
 
 	void write() {
-		System.out.println("write by using pen");
+		loger.info("write by using pen");
 	}
 }
