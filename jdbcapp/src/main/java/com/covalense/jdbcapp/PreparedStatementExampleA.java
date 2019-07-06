@@ -2,7 +2,6 @@ package com.covalense.jdbcapp;
 
 import java.sql.Connection;
 
-
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,9 +24,7 @@ public class PreparedStatementExampleA {
 
 			log.info("connection impl class ===========>" + con.getClass());
 
-			String query = "select * from employee_info"
-					+ " where id=? "
-					+ " AND MNGR_ID=?";
+			String query = "select * from employee_info" + " where id=? " + " AND MNGR_ID=?";
 			pstmt = con.prepareStatement(query);
 			pstmt.setInt(1, Integer.parseInt(args[0]));
 			pstmt.setInt(2, Integer.parseInt(args[1]));

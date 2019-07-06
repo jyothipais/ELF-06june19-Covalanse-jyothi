@@ -55,7 +55,7 @@ public class App {
 
 		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
-		} finally {
+		} /*finally {
 			try {
 				if (con != null) {
 					con.close();
@@ -69,6 +69,6 @@ public class App {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		}
+		}*/
 	}
 }

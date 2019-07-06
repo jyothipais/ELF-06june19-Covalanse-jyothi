@@ -1,7 +1,6 @@
 package com.covalense.jdbcapp;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,29 +9,21 @@ import java.sql.Statement;
 import lombok.extern.java.Log;
 
 @Log
-public class StatementExampleB {
+public class AppTryWithResources {
 	public static void main(String[] args) {
 
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-		try {
+		String query = "select * from employee_info";
+		String dbUrl = "jdbc:mysql://awsdb.cxzorliez4wd.ap-south-1.rds.amazonaws.com:3306/awsdb";
+
+		try (Connection con = DriverManager.getConnection(dbUrl, "root", "root1234");) {
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(query);
 
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			String dbUrl = "jdbc:mysql://localhost:3306/covalense_db";
-			con = DriverManager.getConnection(dbUrl, "root", "root1234");
-
-			log.info("connection impl class ===========>" + con.getClass());
-
-			String query = "select * from employee_info"
-					+ " where id=1 ";
-			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);
-
-			if(rs.next()) {
-				log.info("ID--------------->" + rs.getInt(1));
-				log.info("NAME------------->" + rs.getString(2));
+			while (rs.next()) {
+				log.info("ID--------------->" + rs.getInt("ID"));
+				log.info("NAME------------->" + rs.getString("NAME"));
 				log.info("AGE-------------->" + rs.getInt("AGE"));
 				log.info("GENDER----------->" + rs.getString("GENDER"));
 				log.info("SALARY----------->" + rs.getDouble("SALARY"));
@@ -49,20 +40,6 @@ public class StatementExampleB {
 
 		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if (con != null) {
-					con.close();
-				}
-				if (stmt != null) {
-					stmt.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-	}
-}
+		} // End of try-catch
+	}// End of class
+}// End of main
