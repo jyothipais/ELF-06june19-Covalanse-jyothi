@@ -1,5 +1,8 @@
-package com.covalense.hibernate.cache;
+package com.covalense.hibernate.awsrds;
 
+import java.io.Serializable
+
+;
 import java.util.Date;
 
 import javax.persistence.Cacheable;

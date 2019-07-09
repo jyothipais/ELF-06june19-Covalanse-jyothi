@@ -1,14 +1,9 @@
-package com.covalense.hubernate.util;
+package com.covalense.hibernate.cache;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateUtil {
-	
-	private HibernateUtil() {
-		
-	}
-	
+public class HibernateCacheUtil {
 	private static SessionFactory sessionFactory;
 
 	public static SessionFactory buildSessionFactory() {
