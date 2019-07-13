@@ -1,0 +1,21 @@
+.demo{
+    color: chartreuse;
+}
+#NAME{
+    color: blueviolet;
+}
+#Age{
+    color: aqua;
+    font-size: 50px;
+}
+.button1{
+    color: cadetblue;
+    border-radius:5%; 
+}
+.button2{
+    color: cadetblue;
+    border-radius:8%; 
+}
+.blue{
+    color: aqual;
+}
