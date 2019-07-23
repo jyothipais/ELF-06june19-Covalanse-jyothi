@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Favourite Color</title>
+    <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="div"></div>  
+    <script type="text/babel">        
+    class Color extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={favouritecolor:"navyBlue"};
+        }
+        static getDerivedStateFromProps(props,state){
+            return {favouritecolor:props.favcol};
+        }
+        render(){
+            return <h3>MY Fav color is:{this.state.favouriteColor}</h3>         
+            
+        }
+    }
+    ReactDOM.render(<Color />,document.getElementById('div'))
+
+</script>
+  
+</body>
+</html>
