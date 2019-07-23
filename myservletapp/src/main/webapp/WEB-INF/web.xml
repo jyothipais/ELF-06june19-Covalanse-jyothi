@@ -8,6 +8,11 @@
 	<param-name>movie</param-name>
 	<param-value>sholay</param-value>
 	</context-param>
+	
+	<servlet>
+	<servlet-name>myJsp</servlet-name>
+	<jsp-file>/myfirstjsp.jsp</jsp-file>
+	</servlet>
 
 	<servlet>
 		<servlet-name>MyFirstServlet</servlet-name>
@@ -62,4 +67,9 @@
 		<servlet-name>IncludeServlet</servlet-name>
 		<url-pattern>/IncludeServlet</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myJsp</servlet-name>
+		<url-pattern>/currentDatejsp</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

@@ -17,37 +17,34 @@ import com.covalense.webapp.bean.EmployeeInfo;
 import com.covalense.webapp.dao.EmployeeDAO;
 import com.covalense.webapp.dao.EmployeeDAOFactory;
 
-@WebServlet(urlPatterns="/search",
-						initParams= {
-								@WebInitParam(name="actress",value="ishwarya")
-						}
-)
+@WebServlet(urlPatterns = "/search", initParams = { @WebInitParam(name = "actress", value = "ishwarya") })
 
 //@WebServlet("/search/employeesearch")
-public class EmployeeSearchServlet extends HttpServlet{
+public class EmployeeSearchServlet extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
-			throws ServletException, IOException {
-		ServletContext ctx=getServletContext();
-		String movieName=ctx.getInitParameter("movie");
-		
-		ServletConfig config=getServletConfig();
-		String actorname= config.getInitParameter("movie");
-		String actorsname=config.getInitParameter("actress");
-	
-		String idValue= req.getParameter("id");
-		
-		EmployeeDAO dao=EmployeeDAOFactory.getinstance();
-		EmployeeInfo bean=dao.getEmployeeInfo(idValue);
-		PrintWriter out=resp.getWriter();
-		
-		if(bean==null) {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//ServletContext ctx = getServletContext();
+		ServletContext context=getServletContext();
+		//String movieName = ctx.getInitParameter("movie");
+		String movieName = context.getInitParameter("movie");
+
+		ServletConfig config = getServletConfig();
+		String actorname = config.getInitParameter("movie");
+		String actorsname = config.getInitParameter("actress");
+
+		String idValue = req.getParameter("id");
+
+		EmployeeDAO dao = EmployeeDAOFactory.getinstance();
+		EmployeeInfo bean = dao.getEmployeeInfo(idValue);
+		PrintWriter out = resp.getWriter();
+
+		if (bean == null) {
 			out.print("<HTML>");
 			out.print("<BODY>");
 			out.print("<H1><span style=\"color:red\"> Employee Not Found</span></H1>");
 			out.print("</BODY>");
 			out.print("</HTML>");
-		}else {
+		} else {
 			out.print("<HTML>");
 			out.print("<BODY>");
 			out.print("<H1><span style=\"color:green\"> Employee Found</span></H1>");
@@ -59,14 +56,35 @@ public class EmployeeSearchServlet extends HttpServlet{
 			out.print(" <BR> MAIL ID IS :" + bean.getEMAIL());
 			out.print(" <BR> MANAGER ID IS :" + bean.getMNGR_ID());
 			out.print(" <BR> DESIGNATION IS :" + bean.getDESIGNATION());
-			out.print("<BR> movie IS :" +movieName);
-			out.print("<BR> actorname IS :" +actorname);
+			out.print("<BR> movie IS :" + movieName);
+			out.print("<BR> actorname IS :" + actorname);
 			out.print("</BODY>");
 			out.print("</HTML>");
-			
+
 		}
-		
+
+		// get the obj from forwrd servlet
+		//EmployeeInfo employeeInfo = (EmployeeInfo) req.getAttribute("info");
+		EmployeeInfo employeeInfo = (EmployeeInfo) context.getAttribute("info");
+		if (employeeInfo == null) {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("<H1><span style=\"color:red\"> EmployeeBean object Not Found</span></H1>");
+			out.print("</BODY>");
+			out.print("</HTML>");
+		} else {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("<H1><span style=\"color:green\"> EmployeeBean object Found</span></H1>");
+			out.print("<BR>");
+			out.print(" <BR> NAME IS :" + employeeInfo.getNAME());
+			out.print(" <BR> AGE IS :" + employeeInfo.getAGE());
+			out.print("<BR> ID IS :"+employeeInfo.getID());
+			out.print("</BODY>");
+			out.print("</HTML>");
+
+		}
+
 	}
 
-	
-}//End of class
+}// End of class

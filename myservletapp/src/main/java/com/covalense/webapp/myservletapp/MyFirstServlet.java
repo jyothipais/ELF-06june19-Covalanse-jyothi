@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.covalense.webapp.bean.EmployeeInfo;
+
 import lombok.extern.java.Log;
 
 @Log
@@ -20,8 +22,12 @@ public  class MyFirstServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		ServletContext ctx=getServletContext();
-		String movieName=ctx.getInitParameter("movie");
+		/*
+		 * ServletContext ctx=getServletContext(); String
+		 * movieName=ctx.getInitParameter("movie");
+		 */
+		ServletContext context=getServletContext(); String
+		 movieName=context.getInitParameter("movie");
 		
 		ServletConfig config=getServletConfig();
 		String actorname= config.getInitParameter("movie");
@@ -62,6 +68,28 @@ public  class MyFirstServlet extends HttpServlet {
 		// resp.setHeader("Refresh","1");
 		PrintWriter out = resp.getWriter();
 		out.print(htmlResponse);
+		
+		// get the obj from forwrd servlet
+				EmployeeInfo employeeInfo = (EmployeeInfo) context.getAttribute("info");
+				if (employeeInfo == null) {
+					out.print("<HTML>");
+					out.print("<BODY>");
+					out.print("<H1><span style=\"color:red\"> EmployeeBean object Not Found</span></H1>");
+					out.print("</BODY>");
+					out.print("</HTML>");
+				} else {
+					out.print("<HTML>");
+					out.print("<BODY>");
+					out.print("<H1><span style=\"color:green\"> EmployeeBean object Found</span></H1>");
+					out.print("<BR>");
+					out.print(" <BR> NAME IS :" + employeeInfo.getNAME());
+					out.print(" <BR> AGE IS :" + employeeInfo.getAGE());
+					out.print("<BR> ID IS :"+employeeInfo.getID());
+					out.print("</BODY>");
+					out.print("</HTML>");
+
+				}
+
 	}
 
 }
