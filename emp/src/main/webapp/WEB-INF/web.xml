@@ -1,0 +1,86 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>LoginPage</servlet-name>
+		<display-name>LoginPage</display-name>
+		<description></description>
+		<servlet-class>com.covalense.emp.servlet.LoginPage</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>mycollapseJsp</servlet-name>
+		<jsp-file>/collapse.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myhomepageJsp</servlet-name>
+		<jsp-file>/homepage.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myonetooneJsp</servlet-name>
+		<jsp-file>/onetoone.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myemployeeinfoJsp</servlet-name>
+		<jsp-file>/employeeinfo.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myJsp</servlet-name>
+		<jsp-file>/login.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myloginfailJsp</servlet-name>
+		<jsp-file>/loginfail.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Registration</servlet-name>
+		<display-name>Registration</display-name>
+		<description></description>
+		<servlet-class>com.covalense.emp.servlet.Registration</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EmployeeOtherInfo</servlet-name>
+		<display-name>EmployeeOtherInfo</display-name>
+		<description></description>
+		<servlet-class>com.covalense.emp.servlet.EmployeeOtherInfo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginPage</servlet-name>
+		<url-pattern>/LoginPage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myJsp</servlet-name>
+		<url-pattern>/loginjsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myhomepageJsp</servlet-name>
+		<url-pattern>/homepagejsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myloginfailJsp</servlet-name>
+		<url-pattern>/loginfail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Registration</servlet-name>
+		<url-pattern>/Registration</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myemployeeinfoJsp</servlet-name>
+		<url-pattern>/employeeinfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EmployeeOtherInfo</servlet-name>
+		<url-pattern>/EmployeeOtherInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>myonetooneJsp</servlet-name>
+	<url-pattern>/onetoone</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>mycollapseJsp</servlet-name>
+	<url-pattern>/collapse</url-pattern>
+	</servlet-mapping>
+</web-app>
