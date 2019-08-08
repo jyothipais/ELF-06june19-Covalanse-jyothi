@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />    
+    <title>React App</title>
+  </head>
+  <style>
+      .aqua{
+          color: aqua;
+      }
+  </style>
+  <body>
+    <div id="react-container"></div>
+    
+    <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script>
+        //Creating Array
+        const items=['jyothi','joylin','joy'];
+
+        //Adding Styles Or Attribute
+    const item=React.createElement("h1",{className:'aqua',item:items},"Baked Salman")
+
+    //Creating List
+    const list= React.createElement('ul',null,React.createElement('li',null,'Jyothi'),
+    React.createElement('li',null,'Joylin'),
+    React.createElement('li',null,'Joy')
+    );
+
+    //instead of writing React.createElement n no of times using loop
+    const itemsArray=React.createElement("ul",null,
+    items.map(function(val,index){
+     return  React.createElement('li',{key:index},val);
+    })
+    )  
+
+    //printing Item
+    console.log(item);
+    console.log(itemsArray);
+                        
+    // ReactDOM.render(item,document.getElementById('react-container'))
+    // ReactDOM.render(list,document.getElementById('react-container'))
+    ReactDOM.render(itemsArray,document.getElementById('react-container'))
+    </script>
+  </body>
+</html>
